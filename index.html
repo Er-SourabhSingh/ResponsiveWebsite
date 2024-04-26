@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         /* Common styles */
         body, html {
@@ -16,7 +17,7 @@
         #parent {
             position: relative; /* Position relative to enable absolute positioning of children */
             background-image: url('laptop-background.jpg');
-            height: 100vh;
+            height: 120vh;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -93,7 +94,7 @@
         }
 
         /* Styling for the text inside the parent container */
-        .overlay-text {
+        #overlay-text {
             position: absolute;
             top: 60px; /* Adjust top position */
             left: 50%;
@@ -106,7 +107,7 @@
         }
 
         /* Styling for the article container */
-        .article-container {
+        #article-container {
             position: absolute;
             top: 20%;
             right: 20px;
@@ -121,16 +122,34 @@
 
         /* Media query for smaller screens */
         @media screen and (max-width: 768px) {
-            .overlay-text {
+            #overlay-text {
                 font-size: 6vw;
                 top: 12%; /* Adjust top position for smaller screens */
             }
 
-            .article-container {
+            #article-container {
                 top: 20%;
                 right: 10px;
                 max-width: calc(100% - 20px);
             }
+        }
+
+        #social-icons {
+            position: absolute;
+            bottom: 0; /* Adjust bottom position as needed */
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+
+        #social-icons .icon {
+            width: 24px; /* Adjust width as needed */
+            height: 24px; /* Adjust height as needed */
+            margin: 0 10px; /* Adjust margin between icons as needed */
+            
+        }
+        #social-icons .icon .social-icon{
+            color: white;
         }
     </style>
 </head>
@@ -149,11 +168,11 @@
                 &#9776;
             </div>
         </div>
-        <!-- Title on page -->
-        <div class="overlay-text">B A S I C</div>
+        <!-- Overlay-text -->
+        <div id="overlay-text">B A S I C</div>
 
          <!-- Article container for mobile electronic items -->
-        <div class="article-container">
+        <div id="article-container">
             <article>
                 <aside>
                     <h4>Mobile Electronic Items</h4>
@@ -188,17 +207,22 @@
         </script>
 
          <!-- SVG icons -->
-    <div class="social-icons">
-        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <!-- Facebook icon SVG code -->
-        </svg>
-        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <!-- Twitter icon SVG code -->
-        </svg>
-        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <!-- Instagram icon SVG code -->
-        </svg>
-    </div>
+        <!-- Social media icons -->
+        <div id="social-icons">
+            <div class="icon">
+                <a href="#" class="social-icon" ><i class="fab fa-facebook-f"></i></a>
+            </div>
+
+            <div class="icon">
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="icon">
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+            
+            
+            
+        </div>
     </div>
     <section id="Section1">
         <div id="SectionDiv1">
